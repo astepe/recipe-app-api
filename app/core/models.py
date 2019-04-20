@@ -5,7 +5,6 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, \
                                         PermissionsMixin
 
 
-
 class UserManager(BaseUserManager):
     """Provides helper functions for creating a user or superuser
     Here we are overriding BaseUserManager to handle email address
