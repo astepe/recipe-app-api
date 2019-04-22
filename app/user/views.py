@@ -6,6 +6,10 @@ from user.serializers import UserSerializer, AuthTokenSerializer
 
 class CreateUserView(generics.CreateAPIView):
     """Create a new user in the system"""
+    # this class will handle all of the incoming requests. It will both
+    # validate and serialize the request data into Python objects
+    # We are using the serializer that we defined which corresponds to the
+    # User model
     serializer_class = UserSerializer
 
 
@@ -26,6 +30,7 @@ class ManageUserView(generics.RetrieveUpdateAPIView):
     # this defines the level of access that the user will have
     permission_classes = (permissions.IsAuthenticated, )
 
+    # overriding base class method to just return the user
     def get_object(self):
         """Retrieve the authenticated user object"""
         return self.request.user
