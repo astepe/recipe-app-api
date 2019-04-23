@@ -6,6 +6,9 @@ from rest_framework import serializers
 class UserSerializer(serializers.ModelSerializer):
     """serializer for the users object"""
 
+    # The first part of the serializer class defines the fields that get
+    # serialized and de-serialized
+
     class Meta:
         # this will generate the fields for the serializer based on our custom
         # User model as well as include all validators
