@@ -15,6 +15,7 @@ router = DefaultRouter()
 # This will then generate the appropriate urls for each view
 router.register('tags', views.TagViewSet)
 router.register('ingredients', views.IngredientViewSet)
+router.register('recipes', views.RecipeViewSet)
 
 app_name = 'recipe'
 
